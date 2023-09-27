@@ -1,0 +1,50 @@
+.preview .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.preview .state {
+    position: absolute;
+    color: yellow;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    top: 0;
+    left: 0;
+
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    z-index: 1;
+
+}
+
+.preview .card { 
+    width: 12rem;
+}
+
+.preview .row { gap: 20px; }
+.preview .state::after { content: ""; }
+.preview .state::before { content: ""; }
+
+
+
+.preview .card:hover {
+    position: relative;
+    filter: brightness(0.6);
+    cursor: pointer;
+}
+
+.preview .card:hover::before {
+    content: "자세히 보기";
+    white-space : nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+  }

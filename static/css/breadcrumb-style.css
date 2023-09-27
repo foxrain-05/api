@@ -1,0 +1,34 @@
+.breadcrumb-container {
+    --bs-gutter-x: 0;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image1 { background: url('../img/breadcrumb/background1.jpg') no-repeat center / cover; }
+.image2 { background: url('../img/breadcrumb/background2.jpg') no-repeat center / cover; }
+.image3 { background: url('../img/breadcrumb/background3.jpg') no-repeat center / cover; }
+
+
+.breadcrumb-container nav {
+    --bs-breadcrumb-divider: '>';
+}
+
+.breadcrumb-container .breadcrumb-item::before {
+    color:white;
+    font-weight: 500;
+}
+
+.breadcrumb-container .certificate-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border: 1px solid #aaaaaa;
+}
+
+.breadcrumb-container .certificate-item h1 {
+    height: 60px;
+}

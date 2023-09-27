@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap 5.3.1 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/outline-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/certificate-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/breadcrumb-style.css') }}">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md py-md-3">
+        <a class="navbar-brand" href="/"><img class="logoImage" src="{{ url_for('static', filename='img/navbar/logo.svg') }}" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
+        <img class="navbar-toggler-img" src="{{ url_for('static', filename='img/navbar/hamburger_btn.svg') }}" alt="logo"  width="25">
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div></div>
+            <div class="navbar-nav">
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">회사정보</a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="/outline">회사개요</a>
+                <a class="dropdown-item" href="/history">회사연혁</a>
+                <a class="dropdown-item" href="/certificate">상장및 인증현황</a>
+                <a class="dropdown-item" href="/news">회사소식</a>
+                <a class="dropdown-item" href="/location">오시는길</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false">제품설명</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/modules?category=Module&sort_by=New">마이크로웨이브 모듈</a>
+                    <a class="dropdown-item" href="/modules?category=Sensor&sort_by=New">마이크로웨이브 센서</a>
+                    <a class="dropdown-item" href="/modules?category=TrafficSafety&sort_by=New">교통안전</a>
+                </div>
+            </div>
+            <a class="nav-link fs-5" href="#">제품문의</a>
+            </div>
+
+            <div class="nav-item dropdown globe">
+            <a class="nav-link dropdown-toggle fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="mb-2" src="{{ url_for('static', filename='img/navbar/globe.svg') }}" width="25" alt="">
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Korean</a>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid breadcrumb-container mb-4 image1">
+        <nav aria-label="breadcru">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/"><img class="mb-1" src="{{ url_for('static', filename='img/breadcrumb/home.svg') }}" alt="home" height="14"></a></li>
+                <li class="breadcrumb-item text-white fs-5" aria-current="page">회사정보</li>
+            </ol>
+        </nav>
+        <h1 class="text-white fs-1 fw-bold">상장및 인증현황</h1>
+    </div>
+
+
+    <div class="container">
+        <div class="certificate-text d-flex py-3 mb-5 border-bottom">
+            <div class="text-muted fw-bold me-3">
+                Total : <span class="certificateMax">32</span>
+            </div>
+            <div class="text-muted fw-bold">
+                Page : <span class="page">1</span> / <span class="maxPage">3</span>
+            </div>
+        </div>
+
+        <div class="row certificate-container">
+
+
+        </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination d-flex justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">이전</a></li>
+                <li class="page-item"><a class="page-link" href="/certificate?page=1">1</a></li>
+                <li class="page-item"><a class="page-link" href="/certificate?page=2">2</a></li>
+                <li class="page-item"><a class="page-link" href="/certificate?page=3">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">다음</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container footer mt-5">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3 gap-3">
+        <li><a href="#" class="text-muted" style="text-decoration-line:none;">이용약관</a></li>
+        <li><a href="#" class="text-muted" style="text-decoration-line:none;">개인정보처리방침</a></li>
+        <li><a href="#" class="text-muted" style="text-decoration-line:none;">FAQ</a></li>
+    </ul>
+
+    <div class="nav justify-content-between">
+        <div class="footer-info ms-4">
+            <p class="text-muted footer-text mb-1">(주)디넷</p>
+            <p class="text-muted footer-text">사업자등록번호: 514-81-36985</p>
+            <p class="text-muted footer-text">E-mail: dneng@dno.co.kr / dnet3545@gmail.com</p>  
+            <p class="text-muted footer-text">TEL: +82-53-584-3545, 3544</p>
+            <p class="text-muted footer-text">FAX: +82-53-584-6423</p>
+            <p class="text-muted mt-3 mb-5 footer-text">© 2023 (주)Dnet Company, Inc</p>
+            
+        </div>
+        
+        <ul class="list-unstyled gap-3 me-4 d-flex">
+            <li><a href="https://www.youtube.com/@user-cw5is9zn7k"><img src="{{ url_for('static', filename='img/footer/youtube.svg') }}" alt="youtube" width="24" height="24"></a></li>
+            <li><a href="https://blog.naver.com/dnetgroup"><img src="{{ url_for('static', filename='img/footer/blog.png') }}" alt="blog" width="24" height="24"></a></li>
+        </ul>
+    </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/page.js') }}"></script>
+    <!-- Bootstrap 5.3.1 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

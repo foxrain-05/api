@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap 5.3.1 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/news-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/breadcrumb-style.css') }}">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md py-md-3">
+        <a class="navbar-brand" href="/"><img class="logoImage" src="{{ url_for('static', filename='img/navbar/logo.svg') }}" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="navbar-toggler-img" src="{{ url_for('static', filename='img/navbar/hamburger_btn.svg') }}" alt="logo"  width="25">
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div></div>
+            <div class="navbar-nav">
+                <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">회사정보</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/outline">회사개요</a>
+                    <a class="dropdown-item" href="/history">회사연혁</a>
+                    <a class="dropdown-item" href="/certificate">상장및 인증현황</a>
+                    <a class="dropdown-item" href="/news">회사소식</a>
+                    <a class="dropdown-item" href="/location">오시는길</a>
+                </div>
+                </div>
+                <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false">제품설명</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/modules?category=Module&sort_by=New">마이크로웨이브 모듈</a>
+                    <a class="dropdown-item" href="/modules?category=Sensor&sort_by=New">마이크로웨이브 센서</a>
+                    <a class="dropdown-item" href="/modules?category=TrafficSafety&sort_by=New">교통안전</a>
+                </div>
+                </div>
+                <a class="nav-link fs-5" href="#">제품문의</a>
+            </div>
+    
+            <div class="nav-item dropdown globe">
+                <a class="nav-link dropdown-toggle fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="mb-2" src="{{ url_for('static', filename='img/navbar/globe.svg') }}" width="25" alt="">
+                </a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Korean</a>
+                </div>
+            </div>
+        </div>
+        </nav>
+    
+    <div class="container-fluid breadcrumb-container mb-4 image1">
+        <nav aria-label="breadcru">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/"><img class="mb-1" src="{{ url_for('static', filename='img/breadcrumb/home.svg') }}" alt="home" height="14"></a></li>
+                <li class="breadcrumb-item text-white fs-5" aria-current="page">회사정보</li>
+            </ol>
+        </nav>
+        <h1 class="text-white fs-1 fw-bold">회사소식</h1>
+    </div>
+
+    <div class="container news-container">
+        <div class="row">
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/1.webp') }}" alt="">
+                <div class="news-content ms-4">
+                    <h3 class="fw-bold mb-2">대구 국제 미래모빌리티 엑스포 참가</h3>
+                    <h5 class="text-muted mb-4">(주)Dnet이 대구 EXCO에서 열리는<br> 대구 국제 미래모빌리티 엑스포에 참가합니다.</h5>
+
+                    <h5 class="text-muted fs-6"><span class="fw-bold">기간</span> : 2022.10.27 ~ 2022.10.29</h5>
+                    <h5 class="text-muted fs-6"><span class="fw-bold">시간</span> : 10:00 ~ 18:00 (토 17:00)</h5>
+                    <h5 class="text-muted fs-6 mb-4"><span class="fw-bold">장소</span> : 대구 EXCO(Dnet 부스-K100)</h5>
+                    
+                    <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                    <ul style="list-style-type: none;" class="ps-0 pb-2">
+                        <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                        <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                    </ul>
+                    
+                    <a class="btn btn-dark" href="https://blog.naver.com/dnetgroup/222911896499">관련 정보 보기</a>
+                </div>
+            </div>
+
+
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/2.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">(주)Dnet 국제부품소재산업전 참가</h3>
+                        <h5 class="text-muted mb-4">(주)Dnet이 대구 EXCO에서 열리는<br> 국제부품소재선업전에 참가하였습니다.</h5>
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-3">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                        <a class="btn btn-dark mb-3 px-4" href="https://www.idaegu.co.kr/news/articleView.html?idxno=362739">기사 보기</a>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/3.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">대구 엑스코 과속경보시스템 설치</h3>
+                        <h5 class="text-muted mb-4">(주)Dnet의 과속경보시스템이<br> 대구 엑스코 정문에 설치되었습니다.</h5>
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-3">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                        <div class="btn-group">
+                            <a class="btn btn-dark mb-3" href="https://www.idaegu.co.kr/news/articleView.html?idxno=362739">기사 보기 1</a>
+                            <a class="btn btn-secondary mb-3" href="https://www.idaegu.co.kr/news/articleView.html?idxno=362739">기사 보기 2</a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/4.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">벤처나라 등록</h3>
+                        <h5 class="text-muted mb-4">(주)Dnet의 과속경보시스템과 레이더 감지기가<br> 조달청 벤처나라에 지정 등록되었습니다.</h5>
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-3">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                        <div class="btn-group">
+                            <a class="btn btn-dark mb-3" href="https://fe66641d-f1f8-4874-a0a8-73ce33c96e13.filesusr.com/ugd/38ff0f_aeca302de0304d0a852b9b816db7320d.pdf?index=true">지정증서 보기</a>
+                            <a class="btn btn-secondary mb-3" href="/product/dds-1500">제품 보기</a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/5.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">특허 등록 : 제 10-2095833호</h3>
+                        <h5 class="text-muted">(주)Dnet은 2020년 3월 26일 차량 과속방지 시스템 특허등록을 <br> 완료하였습니다.</h5>
+                        <h5 class="text-muted mb-4">과속차량 촬영 기능 및 속도 선택 기능이 있으며 저희 사에서 제공하는 <br>GUI 프로그램으로 모두 간단히 설정가능합니다.</h5>
+
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-3">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                        <div class="btn-group">
+                            <a class="btn btn-dark mb-3" href="https://fe66641d-f1f8-4874-a0a8-73ce33c96e13.filesusr.com/ugd/38ff0f_7272d117342645629c29a737355e2fdf.pdf">지정증서 보기</a>
+                            <a class="btn btn-secondary mb-3" href="/product/dds-1500">제품 보기</a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/6.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">특허 등록 : 제 10-2090767호</h3>
+                        <h5 class="text-muted">(주)Dnet은 2020년 3월 12일 5.8Ghz pin antenna<br>원천기술 특허등록을 완료하였습니다.</h5>
+                        <h5 class="text-muted mb-4">센서를 천정에 설치시 원뿔형으로 방사구조가 형성되어 오감지 확률이 낮으며 전파가 분산되지 않는다는 장점이 있습니다.</h5>
+                        
+                        <h5 class="text-muted fs-6"><span class="fw-bold">관련상품</span>: DND-200S, DND-200</h5>
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-3">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                        <div class="btn-group">
+                            <a class="btn btn-dark mb-3" href="https://fe66641d-f1f8-4874-a0a8-73ce33c96e13.filesusr.com/ugd/38ff0f_7272d117342645629c29a737355e2fdf.pdf">지정증서 보기</a>
+                            <a class="btn btn-secondary mb-3" href="/product/dds-1500">제품 보기</a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/7.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">새로운 카탈로그</h3>
+                        <h5 class="text-muted mb-4">(주)Dnet의 새 카탈로그를 다운받으시고 제품 정보를 확인하세요.</h5>
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-3">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                    
+                        <a class="btn btn-dark mb-3" href="https://fe66641d-f1f8-4874-a0a8-73ce33c96e13.filesusr.com/ugd/38ff0f_b3ee9d4767374c94aeeb85cf1f495443.pdf">다운로드 하기</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/8.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">성능인증</h3>
+                        <h5 class="text-muted mb-4">(주)Dnet은 2019년 6월 12일 zone 분할 Radar 감지기 <br> (DND-30/DND-60/DND-90)의 성능인증 취득을 완료했습니다.</h5>
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-3">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                    
+                        <div class="btn-group">
+                            <a class="btn btn-dark mb-3" href="https://fe66641d-f1f8-4874-a0a8-73ce33c96e13.filesusr.com/ugd/38ff0f_9fdf82c4aece4cd7baf283bb2a138728.pdf">성능인증서 보기</a>
+                            <a class="btn btn-secondary mb-3" href="https://dnet3545.wixsite.com/mysite/security-detector">제품 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/9.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">미연방정부 조달벤더 승인</h3>
+                        <h5 class="text-muted">(주)Dnet은 2018년 12월 27일 미연방정부의 조달벤더로 승인되어<br>미연방정부의 모든 조달입찰에 참여할 수 있게 되었습니다.</h5>
+                        <h5 class="text-muted mb-4">미연방정부의 조달벤더 등록은 (주)Dnet의 우수한 품질을 전세계에 알리는 계기가 될 것이며, 지속적으로 해외 매출 증진을 위한 노력과 결실을 여러분들께 보여 드리도록 하겠습니다.</h5>
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-3">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                    
+                        <a class="btn btn-dark mb-3 px-4" href="https://dnet3545.wixsite.com/mysite/dnet-co-ltd">문의 하기</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/10.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">특허등록 - 차량 내 잔류승객 감지 및 경보장치</h3>
+                        <h5 class="text-muted">(주)Dnet은 "차량 내 잔류승객 감지 및 경보장치"로 국내 및 미국 특허등록을 완료하였습니다.</h5>
+                        <h5 class="text-muted mb-4">잔류승객이 있을 시 레이더 센서로 자동감지 후 경보를 울리도록 하여 남아있는 사람이 버튼을 누를 수 없는 상황까지 고려하였습니다.</h5>
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-3">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                    
+                        <div class="btn-group">
+                            <a class="btn btn-dark mb-3" href="https://fe66641d-f1f8-4874-a0a8-73ce33c96e13.filesusr.com/ugd/38ff0f_22b27e51f1f649d687fd3390f67bb23f.pdf">특허증(한국)</a>
+                            <a class="btn btn-secondary mb-3" href="https://fe66641d-f1f8-4874-a0a8-73ce33c96e13.filesusr.com/ugd/38ff0f_2892b4454932455facddb676b6455dfb.pdf">특허증(미국)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/11.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">보안 레이더 센서 운용교육 실시</h3>
+                        <h5 class="text-muted">(주)Dnet에서는 2018년 11년 15일 동해지방해양수산청에서 약 30명의 공무원을 대상으로 보안 레이더 센서 운용 교육을 150분 동안 진행하였습니다.</h5>
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-3">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                    
+                        <div class="btn-group">
+                            <a class="btn btn-dark mb-3" href="mailto:dneng@dno.co.kr">문의 하기</a>
+                            <a class="btn btn-secondary mb-3" href="https://fe66641d-f1f8-4874-a0a8-73ce33c96e13.filesusr.com/ugd/38ff0f_06707e3698634fe6b4544b728a97a2dd.pptx?dn=%EB%8F%99%ED%95%B4%ED%95%B4%EC%88%98%EC%B2%AD%EA%B5%90%EC%9C%A1%20181115.pptx">사진 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/12.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">차량 과속단속 시스템</h3>
+                        <h5 class="text-muted mb-2">(주)Dnet은 속도 전광판 및 과속차량촬영 시스템을 자체 개발하였습니다.</h5>
+                        <h5 class="text-muted mb-0">- 감지거리 설정가능</h5>
+                        <h5 class="text-muted mb-0">- 다수차량 속도 측정시 최저/중간/최고속도 표시 선택</h5>
+                        <h5 class="text-muted mb-0">- 전진/후진 속도 선택</h5>
+
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-4">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                    
+                        <div class="btn-group">
+                            <a class="btn btn-dark mb-3" href="mailto:dneng@dno.co.kr">문의 하기</a>
+                            <a class="btn btn-secondary mb-3" href="https://fe66641d-f1f8-4874-a0a8-73ce33c96e13.filesusr.com/ugd/38ff0f_2610d8f1e6f84a5284dd79c2dc64ef76.pptx?dn=Speed%20Sign%20Detection_Dnet(2018).pptx">제품 정보 확인</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/13.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">디넷 대구시 예비스타기업 선정</h3>
+                        <h5 class="text-muted mb-2">(주)디넷은 대구의 미래 경제성장을 이끌어 갈 "2018년 프리(Pre)-스타기업" 20개사 중 한 곳으로 신규 선정되었습니다.</h5>
+
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-4">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                    
+                        <div class="btn-group">
+                            <a class="btn btn-dark mb-3" href="http://www.ajunews.com/view/20180909031139763">기사 보기</a>
+                            <a class="btn btn-secondary mb-3" href="https://blog.naver.com/tbroadnewsdg/221354187981">동영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 news-item border-bottom">
+                <img src="{{ url_for('static', filename='img/news/14.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">카탈로그</h3>
+                        <h5 class="text-muted mb-2">2018년 디넷의 새로운 카탈로그를 다운로드받으세요.</h5>
+
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-4">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                    
+                        <div class="btn-group">
+                            <a class="btn btn-dark mb-3" href="https://fe66641d-f1f8-4874-a0a8-73ce33c96e13.filesusr.com/ugd/38ff0f_78eb6ed88c6e41889f476bdf3411cfd4.pdf">다운로드(한글)</a>
+                            <a class="btn btn-secondary mb-3" href="https://fe66641d-f1f8-4874-a0a8-73ce33c96e13.filesusr.com/ugd/38ff0f_f3babf7400aa43338980fe7bb1beab9f.pdf">다운로드(ENG)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 news-item">
+                <img src="{{ url_for('static', filename='img/news/15.webp') }}" alt="">
+                <div class="news-content ms-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h3 class="fw-bold mb-4">2016 전파방송산업 신기술상 미래창조과학부 장관상 수상</h3>
+                        <h5 class="text-muted mb-2">(주)디넷은 감지영역 분할기술을 접목한 레이더(Radar, Microwave)감지기를 개발 및 특허등록하고, [2016 전파방송산업 진흥주간]에 수여된 "2016 전파방송산업 신기술상"  미래창조과학부 장관상을 수상하였습니다.</h5>                  
+                    </div>
+                    <div>
+                        <h5 class="text-muted fs-6 fw-bold mb-0">상담 및 문의처</h5>
+                        <ul style="list-style-type: none;" class="ps-0 pb-4">
+                            <li><a href="tel:+82-53-584-3545" class="text-muted" style="text-decoration-line:none;">+82-53-584-3545</a></li>
+                            <li><a href="mailto:dneng@dno.co.kr" class="text-muted" style="text-decoration-line:none;">dneng@dno.co.kr</a></li>
+                        </ul>
+                    
+                        <div class="btn-group">
+                            <a class="btn btn-dark mb-3" href="http://www.etnews.com/news/article.html?id=20161118000160">기사 보기</a>
+                            <a class="btn btn-secondary mb-3" href="https://youtu.be/53fP4iQUXK8">동영상 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container footer mt-5">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3 gap-3">
+        <li><a href="#" class="text-muted" style="text-decoration-line:none;">이용약관</a></li>
+        <li><a href="#" class="text-muted" style="text-decoration-line:none;">개인정보처리방침</a></li>
+        <li><a href="#" class="text-muted" style="text-decoration-line:none;">FAQ</a></li>
+        </ul>
+
+        <div class="nav justify-content-between">
+        <div class="footer-info ms-4">
+          <p class="text-muted footer-text mb-1">(주)디넷</p>
+          <p class="text-muted footer-text">사업자등록번호: 514-81-36985</p>
+          <p class="text-muted footer-text">E-mail: dneng@dno.co.kr / dnet3545@gmail.com</p>  
+          <p class="text-muted footer-text">TEL: +82-53-584-3545, 3544</p>
+          <p class="text-muted footer-text">FAX: +82-53-584-6423</p>
+          <p class="text-muted mt-3 mb-5 footer-text">© 2023 (주)Dnet Company, Inc</p>
+        </div>
+        
+        <ul class="list-unstyled gap-3 me-4 d-flex">
+            <li><a href="https://www.youtube.com/@user-cw5is9zn7k"><img src="{{ url_for('static', filename='img/footer/youtube.svg') }}" alt="youtube" width="24" height="24"></a></li>
+            <li><a href="https://blog.naver.com/dnetgroup"><img src="{{ url_for('static', filename='img/footer/blog.png') }}" alt="blog" width="24" height="24"></a></li>
+        </ul>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.1 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

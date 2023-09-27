@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회사정보 | 연혁</title>
+    <!-- Bootstrap 5.3.1 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/history-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/breadcrumb-style.css') }}">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md py-md-3">
+        <a class="navbar-brand" href="/"><img class="logoImage" src="{{ url_for('static', filename='img/navbar/logo.svg') }}" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
+          <img class="navbar-toggler-img" src="{{ url_for('static', filename='img/navbar/hamburger_btn.svg') }}" alt="logo"  width="25">
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div></div>
+            <div class="navbar-nav">
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">회사정보</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="/outline">회사개요</a>
+                  <a class="dropdown-item" href="/history">회사연혁</a>
+                  <a class="dropdown-item" href="/certificate">상장및 인증현황</a>
+                  <a class="dropdown-item" href="/news">회사소식</a>
+                  <a class="dropdown-item" href="/location">오시는길</a>
+                </div>
+              </div>
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false">제품설명</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/modules?category=Module&sort_by=New">마이크로웨이브 모듈</a>
+                    <a class="dropdown-item" href="/modules?category=Sensor&sort_by=New">마이크로웨이브 센서</a>
+                    <a class="dropdown-item" href="/modules?category=TrafficSafety&sort_by=New">교통안전</a>
+                </div>
+              </div>
+              <a class="nav-link fs-5" href="#">제품문의</a>
+            </div>
+    
+            <div class="nav-item dropdown globe">
+              <a class="nav-link dropdown-toggle fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="mb-2" src="{{ url_for('static', filename='img/navbar/globe.svg') }}" width="25" alt="">
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Korean</a>
+              </div>
+            </div>
+        </div>
+      </nav>
+
+    <div class="container-fluid breadcrumb-container mb-4 image2">
+        <nav aria-label="breadcru">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/"><img class="mb-1" src="{{ url_for('static', filename='img/breadcrumb/home.svg') }}" alt="home" height="14"></a></li>
+                <li class="breadcrumb-item text-white fs-5" aria-current="page">회사정보</li>
+            </ol>
+        </nav>
+        <h1 class="text-white fs-1 fw-bold">연혁</h1>
+    </div>
+
+
+    <!-- 연혁 -->
+    <div class="container history-container pt-4">
+      <div class="row justify-content-around">
+
+          <div class="col-12 col-md-5 image-container">
+              <img src="{{ url_for('static', filename='img/history/main1.jpg') }}" alt="history">
+          </div>
+
+
+          <div class="history col-12 col-md-6">
+              <div class="history-item">
+                  <p class="fw-bold year">2023.09</p>
+                  <ul>
+                      <li>DND-100B 조달청 혁신제품 선정</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2023.07</p>
+                  <ul>
+                      <li>DND-30/60/90 중소 밴처기업부 기술혁신 체품 선정</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2022.05</p>
+                  <ul>
+                      <li>장애인 주차면 단속 시스템 개발 중소벤처기업부</li>
+                      <li>레이더 보안 감지기 성능 인증서 취득</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2021.04</p>
+                  <ul>
+                      <li>특허출원(10-2352344): 옥외용 침입 감지 시스템</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2020.12</p>
+                  <ul>
+                      <li>RF 기술 연구소 설립</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2020.06</p>
+                  <ul>
+                      <li>상표출원(40-2020-0021334) 말레이시아</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2020.03</p>
+                  <ul>
+                      <li>특허등록(10-2095833) 차량 과속방지 시스템</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2019.07</p>
+                  <ul>
+                      <li>미국특허등록 완료 (차량 내 잔류 승객 감지 및 경보장치)</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2019.06</p>
+                  <ul>
+                      <li>성능인증 획득(중소벤처기업부) (DND-30/60/90)</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2019.05</p>
+                  <ul>
+                      <li>중소벤처기업 등록</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2019.02</p>
+                  <ul>
+                      <li>DND-300(S) KC 적합인증</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2018.12</p>
+                  <ul>
+                      <li>DND-3106 KC 적합인증</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2018.09</p>
+                  <ul>
+                      <li>Pre-Star 기업 선정</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2018.05</p>
+                  <ul>
+                      <li>연구전담부서 인정</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2018.03</p>
+                  <ul>
+                      <li>DND-060 KC 적합인증</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2017.12</p>
+                  <ul>
+                      <li>수출유망중소기업 선정</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2017.11</p>
+                  <ul>
+                      <li>특허출원(차량 내 잔류승객 감지 및 경보장치) 완료</li>
+                      <li>특허출원(접근 객체 감지를 통한 하차승객 보호장치) 완료</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2017.03</p>
+                  <ul>
+                      <li>초소형 K-Band Radar Module 개발(DND-324/DND-334)</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2016.11</p>
+                  <ul>
+                      <li>부품소재전문기업 선정(산업자원부)</li>
+                      <li>제17회 전파방송 신기술상: 미래창조과학부장관상 수상</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2016.09</p>
+                  <ul>
+                      <li>특허등록(10-1656251)</li>
+                      <li>침입감지시스템(감지영역 분할기술을 접목한 Radar 보안감지기)</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2016.05</p>
+                  <ul>
+                      <li>Radar 보안감지기(DND-Series: DND-30/DND-60/DND-90): IP65 인증</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2016.03</p>
+                  <ul>
+                      <li>물체감지센서용 무선기기(24GHz 주파수)</li>
+                      <li>적합인증:MSIP-CRM-DNR-DND-306090</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2016.02</p>
+                  <ul>
+                      <li>특허출원(10-2016-0012897)</li>
+                      <li>후방에서 접근하는 이동수단을 알려주는 안전장치(Radar 감지기)</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2015.11</p>
+                  <ul>
+                      <li>DND-30/60/90 특허신청 진행중</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2015.08</p>
+                  <ul>
+                      <li>DND-30/60/90 IP66 및 KCC(방송통신기기인증) 진행중</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2014</p>
+                  <ul>
+                      <li>소재부품 전문기업 등록</li>
+                      <li>군수용 Radar Sensor (DND-30/60/90)개발 및 양산완료</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2011</p>
+                  <ul>
+                      <li>특허결정 및 등록 (스트립라인과 슬롯형 급전부가 결합된 초소형 안테나)</li>
+                      <li>옥외용 보안감지기 개발 (K-Band)</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2009</p>
+                  <ul>
+                      <li>부설연구소 및 제2공장 준공(달성2차 산업단지)</li>
+                      <li>마이크로웨이브 초소형 모듈 개발 및 특허출원</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2007</p>
+                  <ul>
+                      <li>(주)동남엔텍에서 (주)디넷으로 상호 변경</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2006</p>
+                  <ul>
+                      <li>벤처기업 등록 (기술평가우수사업)</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2003</p>
+                  <ul>
+                      <li>마이크로웨이브 센서관련 특허 및 실용신안 출원 및 등록</li>
+                      <li>CE(ETSI EN 300 440), FCC(PART 15), ROHS 인증 획득</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2002</p>
+                  <ul>
+                      <li>마이크로웨이브 센서 모듈 국내 최소 독자개발, 병력특례업체 선정</li>
+                      <li>국내 최초 마이크로웨이브 보안감지기, 조명센서 개발 및 판매</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">2000</p>
+                  <ul>
+                      <li>(주)동남엔텍 법인설립(LNB 개발및 생산)</li>
+                  </ul>
+              </div>
+              <div class="history-item">
+                  <p class="fw-bold year">1987</p>
+                  <ul>
+                      <li>동남엔텍(개인기업) 설립, 산업용로봇 설계 및 생산</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container footer mt-5">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3 gap-3">
+        <li><a href="#" class="text-muted" style="text-decoration-line:none;">이용약관</a></li>
+        <li><a href="#" class="text-muted" style="text-decoration-line:none;">개인정보처리방침</a></li>
+        <li><a href="#" class="text-muted" style="text-decoration-line:none;">FAQ</a></li>
+        </ul>
+
+        <div class="nav justify-content-between">
+        <div class="footer-info ms-4">
+            <p class="text-muted footer-text mb-1">(주)디넷</p>
+            <p class="text-muted footer-text">사업자등록번호: 514-81-36985</p>
+            <p class="text-muted footer-text">E-mail: dneng@dno.co.kr / dnet3545@gmail.com</p>  
+            <p class="text-muted footer-text">TEL: +82-53-584-3545, 3544</p>
+            <p class="text-muted footer-text">FAX: +82-53-584-6423</p>
+            <p class="text-muted mt-3 mb-5 footer-text">© 2023 (주)Dnet Company, Inc</p>
+        </div>
+        
+        <ul class="list-unstyled gap-3 me-4 d-flex">
+            <li><a href="https://www.youtube.com/@user-cw5is9zn7k"><img src="{{ url_for('static', filename='img/footer/youtube.svg') }}" alt="youtube" width="24" height="24"></a></li>
+            <li><a href="https://blog.naver.com/dnetgroup"><img src="{{ url_for('static', filename='img/footer/blog.png') }}" alt="blog" width="24" height="24"></a></li>
+        </ul>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.1 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <!-- Bootstrap 5.3.1 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/outline-style.css') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/breadcrumb-style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation -->
+  <nav class="navbar navbar-expand-md py-md-3">
+      <a class="navbar-brand" href="/"><img class="logoImage" src="{{ url_for('static', filename='img/navbar/logo.svg') }}" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
+        <img class="navbar-toggler-img" src="{{ url_for('static', filename='img/navbar/hamburger_btn.svg') }}" alt="logo"  width="25">
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-main">
+          <div></div>
+          <div class="navbar-nav">
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">회사정보</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/outline">회사개요</a>
+                <a class="dropdown-item" href="/history">회사연혁</a>
+                <a class="dropdown-item" href="/certificate">상장및 인증현황</a>
+                <a class="dropdown-item" href="/news">회사소식</a>
+                <a class="dropdown-item" href="/location">오시는길</a>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false">제품설명</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/modules?category=Module&sort_by=New">마이크로웨이브 모듈</a>
+                <a class="dropdown-item" href="/modules?category=Sensor&sort_by=New">마이크로웨이브 센서</a>
+                <a class="dropdown-item" href="/modules?category=TrafficSafety&sort_by=New">교통안전</a>
+              </div>
+            </div>
+            <a class="nav-link fs-5" href="#">제품문의</a>
+          </div>
+  
+          <div class="nav-item dropdown globe">
+            <a class="nav-link dropdown-toggle fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="mb-2" src="{{ url_for('static', filename='img/navbar/globe.svg') }}" width="25" alt="">
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">English</a>
+              <a class="dropdown-item" href="#">Korean</a>
+            </div>
+          </div>
+      </div>
+    </nav>
+
+
+    <div class="container-fluid breadcrumb-container mb-4 image1">
+      <nav aria-label="breadcru">
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/"><img class="mb-1" src="{{ url_for('static', filename='img/breadcrumb/home.svg') }}" alt="home" height="14"></a></li>
+              <li class="breadcrumb-item text-white fs-5" aria-current="page">회사정보</li>
+          </ol>
+      </nav>
+      <h1 class="text-white fs-1 fw-bold">회사개요</h1>
+  </div>
+
+    <div class="container pt-4 pb-5">
+      <div class="row">
+        <p class="text-center"><img src="{{ url_for('static', filename='img/outline/logo.svg') }}" alt="" width="400" class="my-4"></p>
+        <p class="fs-5 text-center fw-sm">(주)Dnet은 마이크로웨이브 센서(조명센서, 보안감지기, 자동문센서, 차량감지기 등)을 전문으로 생산하는 중소기업으로서<br>
+          급속히 발전하는 기업 환경 속에서 신기술을 이용한 첨단제품 개발의 중요성을 인식하고,<br> 
+          제품생산을 위한 연구 개발에 집중적으로 투자하고 있는 벤처기업 및 수출유망 중소기업입니다.<br><br>
+          (주)Dnet은 이를 기반으로 정보통신/전기전자/레이더 센서(Radar Sensor) 기기 개발을 위하여 노력한 결과,<br>
+          부가 가치를 창출하는 마이크로웨이브 모션센서(module/Detector/Activator)를 개발 완료후<br>
+          양산체제를 위하여 생산라인을 구축하고 본격적인 제품생산 및 해외 판매를 하고 있습니다.<br>
+          저희 (주)Dnet에서 생산되고 있는 제품은 제품의 우수성을 전량 해외에 수출되고 있고,<br> 부설연구소에서는 신제품 개발에 최선을 다하고 있습니다.<br><br>
+          (주)Dnet은 신제품 개발 및 다년간의 풍부한 실무경험과 인적자원을 바탕으로<br> 소비자의 요구와 기대에 부응하는 제품의 개발과 생산 및 판매에 매진할 것입니다.<br>
+          저희 임직원 일동은 초인류의 정보통신기기 제조업체로 발돋움하기 위하여 도전하고 창조하는 마음가짐으로<br> 21세기를 이끌어 가는 MICROWAVE 선도기업으로 성장할 것입니다.<br><br>
+          감사합니다.</p>   
+      </div>
+    </div>
+
+      <!-- Footer -->
+    <footer class="container footer mt-5">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3 gap-3">
+        <li><a href="#" class="text-muted" style="text-decoration-line:none;">이용약관</a></li>
+        <li><a href="#" class="text-muted" style="text-decoration-line:none;">개인정보처리방침</a></li>
+        <li><a href="#" class="text-muted" style="text-decoration-line:none;">FAQ</a></li>
+      </ul>
+
+      <div class="nav justify-content-between">
+        <div class="footer-info ms-4">
+          <p class="text-muted footer-text mb-1">(주)디넷</p>
+          <p class="text-muted footer-text">사업자등록번호: 514-81-36985</p>
+          <p class="text-muted footer-text">E-mail: dneng@dno.co.kr / dnet3545@gmail.com</p>  
+          <p class="text-muted footer-text">TEL: +82-53-584-3545, 3544</p>
+          <p class="text-muted footer-text">FAX: +82-53-584-6423</p>
+          <p class="text-muted mt-3 mb-5 footer-text">© 2023 (주)Dnet Company, Inc</p>
+        </div>
+          
+        <ul class="list-unstyled gap-3 me-4 d-flex">
+            <li><a href="https://www.youtube.com/@user-cw5is9zn7k"><img src="{{ url_for('static', filename='img/footer/youtube.svg') }}" alt="youtube" width="24" height="24"></a></li>
+            <li><a href="https://blog.naver.com/dnetgroup"><img src="{{ url_for('static', filename='img/footer/blog.png') }}" alt="blog" width="24" height="24"></a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.1 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

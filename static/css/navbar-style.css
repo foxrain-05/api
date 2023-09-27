@@ -1,0 +1,35 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+}
+
+/* navbar */
+.navbar-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 5%;
+  border: none;
+}
+
+.navbar-toggler:focus { box-shadow: none; }
+.logoImage {position: relative; height: 55px; margin-left: 8vw;}
+.navbar .collapse { justify-content: space-between;}
+.navbar-nav .nav-link { white-space: nowrap;}
+.navbar-nav .nav-item {flex: 1;}
+
+.navbar-nav { gap: 200px; }
+
+@media All and (max-width: 768px) {
+  .navbar-nav { gap: 10px; }
+  .logoImage {margin-left: 4vw;}
+}
+
+.navbar-nav {
+  margin-right: 10vw;
+}
+
+.navbar .globe {
+  margin-right: 10vw;
+}

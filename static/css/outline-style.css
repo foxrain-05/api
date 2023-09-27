@@ -1,0 +1,16 @@
+
+.outline-info img {
+    border-radius: 3%;
+    max-width: 675px;
+    max-height: 400px;
+
+    overflow: hidden;
+}
+
+.outline-info .outline-item {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    justify-content: space-between;
+}
