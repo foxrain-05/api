@@ -40,6 +40,7 @@ window.addEventListener('load', async () => {
         category_text[0].innerHTML = "교통안전";
     } else {
         category_text[0].innerHTML = "ERROR!";
+        
     }
 
 
@@ -51,7 +52,7 @@ window.addEventListener('load', async () => {
     sort_btn[3].href = `/modules?category=${category}&sort_by=Desc`;
 
 
-    const url = `http://127.0.0.1:8080/product?category=${category}&sort_by=${sort_by}`;
+    const url = `/product?category=${category}&sort_by=${sort_by}`;
     const response = await fetch(url, {
         method: "GET",
         headers: { "Content-Type": "application/json" }
